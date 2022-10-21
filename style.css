@@ -2,6 +2,8 @@
 /** style.css----file-notes: 1. We start with our rem solution fix, which makes the rem calculation easier, preventing us from having to use a calculator. To use the notes from the previous exercise: 1. Make sure to use rem. 2. Make sure to use the semantic html dictated. 3. Play around with max-width / max-height properties. 4. Take the components from figma. 5. Use the notes on using position to center a div in the middle of the page from the previous exercise -- to make sure this is as efficient as possible **/
 /*Note: the root based system is used to simplify rem-to-px conversion ratios, 1 rem = 10px in this file Note: font-family: 'Fraunces', serif;
  font-family: 'Montserrat', sans-serif;
+ font-family: 'Playfair Display', serif;
+ font-family: 'Open Sans', sans-serif;
  */
  :root {
     font-size: 62.5%;
@@ -48,7 +50,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     font-size: 1.4rem;
-    padding: 3rem;
+    padding: 1rem 1rem 1rem 2.5rem;
     background-color: whitesmoke;
 }
 .card-text-area > h3 {
@@ -67,7 +69,7 @@ body {
     color: hsl(228, 12%, 48%);
     font-family: 'Montserrat', sans-serif;
     padding-right: 2rem;
-    line-height: 2em;
+    line-height: 2.25em;
 }
 .prices--button {
     display: flex;
@@ -114,17 +116,21 @@ button > svg {
     margin-right: 5%;
 }
 /*Mobile Screen Sizes -- Flip from display: row to column */
+
+
+
+
 @media only screen and (max-width: 620px) {
     .section-container {
-        max-width: 32rem;
-        height: 80%;
+        max-width: 30rem;
+        height: 90%;
    }
     .card-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        max-width: 32rem;
+        max-width: 30rem;
         height: 100%;
    }
     .card-image-area {
@@ -139,19 +145,116 @@ button > svg {
         width: 100%;
         height: 58%;
    }
+   .new-att-top > p, .lime > p > a {
+    display: none;
+   }
+    .lime > img {
+        background: url(https://www.frontendmentor.io?ref=challenge);
+    }
+
+    .new-att-bottom {
+        display: flex; 
+        justify-content: center;
+    }
+
 }
+
+
+
 /* Attribution--Start */
-.attribution {
-    font-size: 1.1rem;
+
+
+.new-att-top > img {
+    height: 4rem; 
+    width: 4rem;
+    border-radius: 50%;
+    margin-right: 4%;
+}
+/*Attribution-End */
+
+
+.new-att {
+    font-size: 1.4rem;
     text-align: center;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+
+        display: grid; 
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        color: black; 
+        background-color: #4962B3;
+        color: whitesmoke;
+
 }
-.attribution a {
-    color: hsl(228, 45%, 44%);
+
+.blu {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
 }
-/*Attribution-End */
+
+.new-att-top, .new-att-bottom, .lime {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center;
+}
+.new-att-bottom {
+    padding-bottom: 0; 
+    padding-top: 1.6rem;
+    border-right: 1px solid white;  
+    border-left: 1px solid white;
+    display: flex; 
+    justify-content: space-evenly;
+}
+
+.lni {
+    font-size: xx-large;
+    width: 5rem; 
+    height: 5rem; 
+}
+
+.lni:hover {
+    cursor: pointer; 
+    font-size: 3.4rem;
+        
+}
+
+.lime > p > a, .lni {
+    text-decoration: none; 
+    color: whitesmoke; 
+}
+.lime > p > a:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+ .lime > a {
+  
+    border-radius: 50%;
+    margin-right: 4%;
+ }
+
+ @media only screen and (max-width: 340px) {
+    .lav {
+        font-size: medium;
+        width: 3rem; 
+        height: 3rem;
+    }
+
+    .blu > img {
+        width: 2.75rem; 
+        height: 2.75rem;
+    }
+
+    .lime > a > img {
+        margin-top: .4rem;
+        width: 2.5rem; 
+        height: 2.5rem;
+    }
+}
