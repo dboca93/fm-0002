@@ -50,7 +50,7 @@ body {
     flex-direction: column;
     justify-content: space-evenly;
     font-size: 1.4rem;
-    padding: 1rem 1rem 1rem 2.5rem;
+    padding: 0 1rem 0 2.5rem;
     background-color: whitesmoke;
 }
 .card-text-area > h3 {
@@ -64,12 +64,20 @@ body {
 .card-text-area > h1 {
     font-family: 'Fraunces', serif;
 }
+/*we want to bring the two h1s closer with 
+negative margin values. */
+.gabrielle {
+    margin-bottom: -2.1rem;
+}
+
+
+
 .card-text-area > p {
     font-size: 1rem;
     color: hsl(228, 12%, 48%);
     font-family: 'Montserrat', sans-serif;
     padding-right: 2rem;
-    line-height: 2.25em;
+    line-height: 2.75em;
 }
 .prices--button {
     display: flex;
@@ -111,9 +119,13 @@ button {
     justify-content: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
+    cursor: pointer;
 }
 button > svg {
     margin-right: 5%;
+}
+button:hover {
+    background-color: hsl(157, 43%, 18%);
 }
 /*Mobile Screen Sizes -- Flip from display: row to column */
 
