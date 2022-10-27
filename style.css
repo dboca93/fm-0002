@@ -132,7 +132,6 @@ button:hover {
   .section-container {
     max-width: 30rem;
     min-height: 54rem;
-    height: 90%;
   }
   .card-container {
     display: flex;
